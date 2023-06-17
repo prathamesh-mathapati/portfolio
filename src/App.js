@@ -1,10 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import NavBar from './component/NavBar';
+import "./App.css";
+import Banner from "./component/Banner";
+import ContactUs from "./component/ContactUs";
+import NavBar from "./component/NavBar";
+import Project from "./component/Project";
+import Skills from "./component/Skills";
 
 function App() {
   return (
-    <NavBar/>
+    <div>
+      <NavBar />
+      <Banner />
+      <Skills />
+      <Project />
+      {/* <ContactUs /> */}
+    </div>
   );
 }
 
