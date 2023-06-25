@@ -15,16 +15,28 @@ const Project = () => {
       titel: "Prep 27",
       descripation: "Design and development",
       ImgUrl: prep27,
+      projectDetails: {
+        projectLandingPageUrl: "https://prep27.com/",
+        projectLogingPageUrl: "https://app.prep27.com/",
+      },
     },
     {
       titel: "Cloud Rent",
       descripation: "Development",
       ImgUrl: cloudrent,
+      projectDetails: {
+        projectLandingPageUrl: "https://www.cloudrent.me/",
+        projectLogingPageUrl: "",
+      },
     },
     {
       titel: "POS ",
       descripation: "Design and development by use Electron js",
       ImgUrl: posLogo,
+      projectDetails: {
+        projectLandingPageUrl: "",
+        projectLogingPageUrl: "",
+      },
     },
   ];
 
@@ -45,6 +57,7 @@ const Project = () => {
       ImgUrl: Food,
     },
   ];
+
   return (
     <section className="project">
       <Container>
@@ -70,6 +83,7 @@ const Project = () => {
                     {companyProject.map((items, index) => {
                       return (
                         <ProjectCard
+                          projectDetails={items.projectDetails}
                           key={index}
                           titel={items.titel}
                           descripation={items.descripation}
