@@ -5,7 +5,11 @@ import { useNavigate } from "react-router-dom";
 const ProjectCard = ({ titel, descripation, imgeUrl, projectDetails }) => {
   const nagevation = useNavigate();
   const projectDetailsHandled = (projectDetails, titel) => {
-    nagevation("/projectDetails", { state: { projectDetails, titel } });
+    if (titel === "POS" || titel === "Cloud Rent" || titel === "Prep 27") {
+      nagevation("/projectDetails", { state: { projectDetails, titel } });
+    } else {
+      window.location.replace(projectDetails.projectLogingPageUrl);
+    }
   };
   return (
     <>

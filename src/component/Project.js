@@ -26,11 +26,11 @@ const Project = () => {
       ImgUrl: cloudrent,
       projectDetails: {
         projectLandingPageUrl: "https://www.cloudrent.me/",
-        projectLogingPageUrl: "",
+        projectLogingPageUrl: "https://app.onlinerentalstore.com/auth/login",
       },
     },
     {
-      titel: "POS ",
+      titel: "POS",
       descripation: "Design and development by use Electron js",
       ImgUrl: posLogo,
       projectDetails: {
@@ -45,16 +45,30 @@ const Project = () => {
       titel: "E-commerces",
       descripation: "Design and development",
       ImgUrl: Ecommerce,
+      projectDetails: {
+        projectLandingPageUrl: "",
+        projectLogingPageUrl: "https://lighthearted-torte-c8dc5c.netlify.app/",
+      },
     },
     {
       titel: "Omifood",
       descripation: "Design",
       ImgUrl: omiFood,
+      projectDetails: {
+        projectLandingPageUrl:
+          "https://prathamesh-omnifood-wisp-d4ff39.netlify.app/",
+        projectLogingPageUrl: "",
+      },
     },
     {
       titel: "Food sherch",
       descripation: "Design and development",
       ImgUrl: Food,
+      projectDetails: {
+        projectLandingPageUrl:
+          "https://prathamesh-foodrecipe-912ce.netlify.app/",
+        projectLogingPageUrl: "",
+      },
     },
   ];
 
@@ -98,6 +112,7 @@ const Project = () => {
                     {ownProject.map((items, index) => {
                       return (
                         <ProjectCard
+                          projectDetails={items.projectDetails}
                           key={index}
                           titel={items.titel}
                           descripation={items.descripation}

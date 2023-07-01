@@ -74,11 +74,6 @@ const Skills = () => {
           </Col>
         </Row>
       </Container>
-      {/* <img
-        src={colorSharp}
-        alt="colorSharp"
-        className="background-image-left"
-      /> */}
     </section>
   );
 };

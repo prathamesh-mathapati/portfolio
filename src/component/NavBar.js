@@ -3,13 +3,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon2 from "../assets/img/resume.png";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import logo from "../assets/img/logo.svg";
+import resumePdf from "../assets/prathamesh.pdf";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
-  // const [scroll, setscroll] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     if (window.scrollY > 50) {
@@ -17,12 +17,11 @@ const NavBar = () => {
     } else {
       setScrolled(false);
     }
-    window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   const onScroll = () => {
-    console.log("..onScroll");
+    // console.log("..onScroll");
   };
   const onUpdateactiveLinke = (value) => {
     setActiveLink(value);
@@ -69,14 +68,14 @@ const NavBar = () => {
           </Nav>
           <span className="d-flex navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/prathamesh-mathapati-aaaa80263">
                 <img src={navIcon1} alt="..." />
               </a>
-              <a href="#">
+              <a href={resumePdf} download>
                 <img src={navIcon2} alt="..." />
               </a>
-              <a href="#">
-                <img src={navIcon3} alt="..." />
+              <a href="https://www.instagram.com/prathamesh_mathapati/">
+                <img src={navIcon3} alt="" />
               </a>
             </div>
             <button className="vvd" onClick={() => console.log("ll")}>
